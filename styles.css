@@ -1,0 +1,66 @@
+:root {
+    box-sizing: border-box;
+    /*Applies border box sizing to the root element*/
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+    /* Tells all other elements and pseudo-elements to inherit their box sizing */
+}
+
+html,
+/* to override the browser defaults */
+body {
+    margin: 0 auto;
+    padding: 0;
+    width: 80vw;
+}
+
+.grid {
+    display: grid;
+    /* grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto; */
+    grid-template: auto auto / 1fr;
+}
+
+.main-section,
+#navbar,
+#main-heading,
+footer {
+    border-radius: 5px;
+    border: 2px dodgerblue solid;
+}
+
+h1,
+h4 {
+    text-align: center;
+}
+
+
+
+@media (min-width: 30em) {
+    :root {
+        font-size: 1rem;
+    }
+
+.grid {
+        grid-template: auto auto / 1fr 3fr;
+    }
+
+code {
+    padding: 0.5em 1em;
+    display: block;
+    background-color: black;
+    color: white;
+    font-family: Inconsolata, monospace ;
+}
+
+footer {
+    grid-area: 2 / 3 / 1 / 3;
+}
+
+}
