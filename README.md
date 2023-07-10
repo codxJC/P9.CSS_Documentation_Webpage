@@ -2,7 +2,7 @@
 
 I have only created the main grid.
 It will be a simple webpage in terms of styling, mostly text. 
-The focus is to use CSS Grid for the layout and build a responsive webpage where the page layout changes for larger screens.
+The focus is to use CSS Grid for the layout and build a responsive webpage.
 ___
 
 ### PROJECT SCOPE
