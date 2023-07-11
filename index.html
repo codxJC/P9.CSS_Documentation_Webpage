@@ -15,6 +15,11 @@
 
 <body>
     <main id="main-doc" class="grid">
+
+        <!-- ************** -->
+        <!-- Navbar Section -->
+        <!-- ************** -->
+
         <nav id="navbar">
             <header>
 
@@ -22,7 +27,7 @@
                     <li><a class="nav-link" href="#introduction">Introduction</a></li>
                     <li><a class="nav-link" href="#syntax">Syntax</a></li>
                     <li><a class="nav-link" href="#selectors">Selectors</a></li>
-                    <li><a class="nav-link" href="#CSS_flexbox">CSS Flexbox</a></li>
+                    <li><a class="nav-link" href="#responsive">Responsive Web Design</a></li>
                     <li><a class="nav-link" href="#CSS_grid">CSS Grid</a></li>
                     <li><a class="nav-link" href="#Code_snippets">Code snippets</a></li>
                 </ul>
@@ -33,77 +38,182 @@
             <div id="main-heading">
                 <h1>CSS Documentation</h1>
             </div>
+
+            <!-- ******************** -->
+            <!-- Introduction Section -->
+            <!-- ******************** -->
+
             <section class="main-section" id="introduction">
                 <header>
                     <h2>Introduction</h2>
                 </header>
-                <p>CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media.</p>
-                <p></p>
+                <p>CSS (Cascading Style Sheets) is a <strong>stylesheet language</strong> used to describe the presentation of a document written in HTML or XML. CSS describes how elements should be rendered on screen, on paper, in speech, or on other media. CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
+                <!-- <p>When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.</p> -->
+                <p> There are three ways of inserting a style sheet:</p>
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li>
+                        <details open>Each HTML page must include a reference to the external style sheet file inside the <span>&lt;link&gt;</span> element, inside the <span>&lt;head&gt;</span> section.<br>
+                            <summary>External CSS</summary><code>&lt;link rel="stylesheet" href="mystyle.css"&gt;</code>
+                        </details>
+                    </li>
+                        
+                    
+                    <li>
+                        <details open>The internal style is defined inside the <span>&lt;style&gt;</span> element, inside the <span>&lt;head&gt;</span> section.<summary>Internal CSS</summary>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details open>To use inline styles, add the style attribute to the relevant html element. The style attribute can contain any CSS property.<summary>Inline CSS</summary>
+                        <code>&lt;h1 style="color:blue;text-align:center;"&gt;This is a heading &lt;/h1&gt;</code>
+                    </details>
+                        
+                    </li>
                 </ul>
             </section>
+
+            <!-- ************** -->
+            <!-- Syntax Section -->
+            <!-- ************** -->
 
             <section class="main-section" id="syntax">
                 <header>
                     <h2>Syntax</h2>
                 </header>
-                <p></p>
-                <p></p>
+                <p>A CSS rule consists of a selector and a declaration block. The selector points to the HTML element you want to style.<br>   The declaration block contains one or more declarations separated by semicolons.</p>
+                <p>Each declaration includes a CSS property name and a value, separated by a colon. Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</p>
+
+                <code>body { <br>
+                    &nbsp;color: black; <br>
+                    &nbsp;font-family: Helvetica;<br>
+                    }</code>
+                <p>Example explenation:</p>
+
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><span>body</span> is the selector and it points to the respective html element.</li>
+                    <li><span>color</span> and <span>font-family</span> are properties.</li>
+                    <li><span>black</span> and <span>Helvetica</span> are property values.</li>
                 </ul>
             </section>
+
+            <!-- ***************** -->
+            <!-- Selectors Section -->
+            <!-- ***************** -->
 
             <section class="main-section" id="selectors">
                 <header>
                     <h2>Selectors</h2>
                 </header>
-                <p></p>
-                <p></p>
+                <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
+                <p>We can divide CSS selectors into five categories:
+                </p>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Simple selectors</li>
+                    <li><a href="https://www.w3schools.com/css/css_combinators.asp" target="_blank"
+                        title="Opens w3schools article in a new tab.">Combinator selectors</a></li>
+                    <li><a href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank"
+                        title="Opens w3schools article in a new tab.">Pseudo-class selectors</a></li>
+                    <li><a href="https://www.w3schools.com/css/css_pseudo_elements.asp" target="_blank"
+                        title="Opens w3schools article in a new tab.">Pseudo-elements selectors</a></li>
+                    <li><a href="https://www.w3schools.com/css/css_attribute_selectors.asp" target="_blank"
+                        title="Opens w3schools article in a new tab.">Attribute selectors</a></li>
                 </ul>
+                <p>Check also the <a href="https://www.w3schools.com/cssref/css_selectors.php" target="_blank"
+                    title="Opens w3schools article in a new tab.">CSS Selector Reference </a> table.</p>
             </section>
 
-            <section class="main-section" id="CSS_flexbox">
+            <!-- ***************************** -->
+            <!-- Responsive Web Design Section -->
+            <!-- ***************************** -->
+
+            <section class="main-section" id="responsive">
                 <header>
-                    <h2>CSS Flexbox</h2>
+                    <h2>Responsive Web Design</h2>
                 </header>
-                <p></p>
-                <p></p>
+                <p>Web pages can be viewed using many different devices: desktops, tablets, and phones. Your web page should look good, and be easy to use, regardless of the device.
+                Web pages should not leave out information to fit smaller devices, but rather adapt its content to fit any device.</p>
+                <p>It is called responsive web design when you use CSS and HTML to resize, hide, shrink, enlarge, or move the content to make it look good on any screen.</p>
+                <p>Media query is a CSS technique introduced in CSS3. Media queries are used to make a webpage responsive. </p>
+                <p>An example of a media query:</p>
+                <code>
+                    @media only screen and (max-width: 600px) { <br>
+                        &nbsp;body { <br>
+                        &nbsp;background-color: lightblue; <br>
+                      &nbsp;&nbsp;} <br>
+                  }
+                </code>
+                <p>TIf the browser window is 600px or smaller, the background color will be black.</p>
+
+                <p>Follow the link to learn more about <a href="https://www.w3schools.com/css/css_rwd_intro.asp" target="_blank"
+                    title="Opens w3schools article in a new tab.">Responsive Web Design.</a></p>
+                
             </section>
+
+            <!-- **************** -->
+            <!-- CSS Grid Section -->
+            <!-- **************** -->
 
             <section class="main-section" id="CSS_grid">
                 <header>
                     <h2>CSS Grid</h2>
                 </header>
-                <p></p>
-                <p></p>
+                <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning. <br>
+                A grid layout consists of a parent element, with one or more child elements.</p>
+
+                <code>
+                    &lt;div class="grid-container"&gt; <br>
+                    &nbsp;&nbsp;&lt;div class="item"&gt;1&lt;/div&gt; <br>
+                    &nbsp;&nbsp;&lt;div class="item"&gt;2&lt;/div&gt; <br>
+                    &nbsp;&nbsp;&lt;div class="item"&gt;3&lt;/div&gt; <br>
+                    &lt;/div&gt;
+                </code>
+
+                <p>An HTML element becomes a grid container when its display property is set to grid or inline-grid.</p>
+                <code>
+                    .grid.container { <br>
+                    &nbsp;&nbsp;display: grid; <br>
+                    &nbsp;} <br>
+                </code>
+
+
+                <p>Follow the link to learn more about <a href="https://www.w3schools.com/css/css_grid.asp" target="_blank"
+                    title="Opens w3schools article in a new tab.">CSS Grid.</a></p>
             </section>
+
+            <!-- ********************* -->
+            <!-- Code snippets Section -->
+            <!-- ********************* -->
 
             <section class="main-section" id="Code_snippets">
                 <header>
                     <h2>Code snippets</h2>
                 </header>
-                <p></p>
-                <p></p>
+            <p>This section includes code that I use in my stylesheets.</p>
+            <p>The first ruleset applies border box sizing to the root element and the second ruleset tells all other elements and pseudo-elements to inherit their box sizing:</p>
+                <code>
+                    :root { <br>
+                        &nbsp;box-sizing: border-box; <br> 
+                        &nbsp;} <br><br>
+            
+                *, <br>
+                ::before, <br>
+                ::after { <br>
+                    &nbsp;box-sizing: inherit; <br>
+                    &nbsp;} <br>
+                </code>
+            <p>This ruleset overrides the default margin and padding values of the browser:</p>
                 <code>
                     body {<br>
-                    margin: 0 auto;<br>
-                    padding: 0;<br>
-                    width: 80vw;<br>
+                        &nbsp;margin: 0;<br>
+                        &nbsp;padding: 0;<br>
                 } <br>
             </code>
-                <code></code>
-                <code></code>
             </section>
     </main>
+
+    <!-- ************** -->
+    <!-- Footer Section -->
+    <!-- ************** -->
     <footer>
         <h5>All documentation in this page is taken from <a href="https://www.w3schools.com/css/" target="_blank"
                 title="Opens in a new tab.">W3 Schools.</a></h5>
