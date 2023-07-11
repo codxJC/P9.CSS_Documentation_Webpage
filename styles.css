@@ -63,6 +63,26 @@ h2 {
     font-weight: 400;
 }
 
+/* #introduction li {
+    list-style: none;
+    margin-left: 0;
+} */
+
+#introduction ul {
+    list-style: none;
+    padding-left: 0.25em;
+}
+
+summary {
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+span {
+    font-weight: bold;
+    color: fuchsia;
+}
+
 code {
     display: block;
     background-color: navy;
@@ -71,6 +91,14 @@ code {
     padding: 0.25em;
     border-radius: 5px;
 }
+
+#introduction code {
+    display: inline-block;
+}
+
+/* #syntax code {
+    display: inline-block;
+} */
 
 footer {
     text-align: center;
