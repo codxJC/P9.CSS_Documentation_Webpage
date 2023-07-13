@@ -10,7 +10,6 @@ freeCodeCamp project *"Build a Technical Documentation Page"* which has to meet 
 * Used the &lt;details&gt; element in the <strong>Introduction</strong> section.
 ___
 
-#### The styling of the webpage is temporary.
 ### [Live Preview](https://raw.githack.com/codxJC/P9.CSS_Documentation_Webpage/master/index.html) 
 
 :)
