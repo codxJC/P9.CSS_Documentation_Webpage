@@ -21,16 +21,19 @@ body {
 }
 
 .grid {
+    height: 100vh;
     display: grid;
     grid-template-areas: "main-heading"
                          "navbar"
                          "content"
                          "footer";
-        grid-template-rows: auto auto auto auto;
-        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-columns: 1fr; 
 }
 
-#logo {  
+#logo,
+#logo-right,
+#sidebar-right {  
     display: none; /*hides the CSS logo for the single column layout */
 }
 
@@ -68,9 +71,9 @@ body {
 
 #content {
     grid-area: content;
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
     padding: 0 0.25em;
-
+    overflow: auto;
 }
 
 .main-section {
@@ -145,6 +148,7 @@ h4, h5 {
     margin: 0;
 }
 
+
 /*******************************************************/
 /********* Tablet Devices - Larger than 784px **********/
 /*******************************************************/
@@ -155,17 +159,17 @@ h4, h5 {
         font-size: 1rem;
     } */
 
-    html, 
+    /* html, 
     body {
         width: 90vw;
-    }
+    } */
 
 .grid {
-        grid-template-areas: "logo main-heading"
-                             "navbar content"
-                             "footer footer";
-        grid-template-rows: auto auto auto;
-        grid-template-columns: 16em 3fr;
+        grid-template-areas: "logo main-heading logo-right"
+                             "navbar content sidebar-right"
+                             "footer footer sidebar-right";
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 1fr 3fr 1fr;
     }
 
 #logo {
@@ -175,6 +179,21 @@ h4, h5 {
     padding: 0.5em 0;
     }
 
+#logo-right {
+    display: block;
+    background-color: #990100;
+}
+
+#sidebar-right {
+    display: block;
+    background-color: #990100;
+    line-height: 3em;
+    font-size: 3em;
+    color: #0a101f;
+    border-bottom: 0.13em solid #FFFDF7;
+    margin: 0;
+}
+
 #navbar li {
     text-align: left;
     }
@@ -182,8 +201,8 @@ h4, h5 {
 #main-heading {
         background-color: #0a101f;
         border-left: 0.35em solid #FFFDF7;
+        border-right: 0.35em solid #FFFDF7;
     }
-
 
 code {
     padding: 0.5em 1em;
@@ -193,8 +212,18 @@ code {
     font-family: Inconsolata, monospace ;
 }
 
-}
+.heart {
+    fill: red;
+    position: relative;
+    top: 5px;
+    width: 100px;
+    animation: pulse 1s ease infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+  }
 
-/*******************************************************/
-/********* Tablet Devices - Larger than 768px **********/
-/*******************************************************/
+}
